@@ -1,0 +1,51 @@
+@use 'styles/breakpoints';
+
+.offers {
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__notification {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0.25rem;
+      bottom: 0.25rem;
+      left: 0;
+      width: 0.25rem;
+      border-radius: 0.25rem;
+      background-color: var(--color-gold);
+    }
+  }
+
+  .offer-container {
+    margin-top: -1.5rem;
+
+    .offer-list__no-result {
+      transform: translateY(-0.675rem);
+    }
+  }
+
+  @include breakpoints.md {
+    .offer-container {
+      margin-top: -1.5rem;
+    }
+
+    .offer-list__no-result {
+      transform: translateY(-0.25rem);
+    }
+  }
+
+  @include breakpoints.lg {
+    .offer-container {
+      margin-top: -1rem;
+    }
+  }
+}

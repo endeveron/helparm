@@ -1,0 +1,36 @@
+@use '../../form/form.scss';
+@use 'styles/mixins';
+
+.auth-form {
+  @include mixins.flex-col-center();
+
+  &__fields-wrapper {
+    width: 20rem;
+    padding: 1rem;
+  }
+
+  &__actions-wrapper {
+    padding: 1rem 0;
+  }
+
+  &__button {
+    width: 12rem;
+  }
+
+  &__field {
+    input {
+      background-color: var(--color-form-input-bg);
+    }
+  }
+
+  &__icon {
+    opacity: 0.5;
+    color: var(--color-second);
+    transform: translateY(0.285rem);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

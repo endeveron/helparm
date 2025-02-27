@@ -1,0 +1,17 @@
+@use 'styles/breakpoints';
+
+.offer-category-list {
+  display: flex;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+
+  &__content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @include breakpoints.sm {
+    gap: 0.75rem;
+  }
+}

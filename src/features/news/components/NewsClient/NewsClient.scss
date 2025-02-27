@@ -1,0 +1,143 @@
+@use 'styles/breakpoints';
+
+.news {
+  &__content {
+    margin-top: 2rem;
+  }
+
+  &__list {
+    margin-top: 2rem;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .news-card {
+      &.card--a {
+        width: calc(50% - 0.5rem);
+      }
+
+      &__content {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    &__list {
+      .news-card {
+        width: 18rem;
+      }
+    }
+  }
+
+  @include breakpoints.lg {
+    &__content {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 2rem;
+    }
+
+    .news-list,
+    .news-container {
+      width: 100%;
+    }
+
+    .card-list {
+      gap: 1rem;
+    }
+
+    &__list {
+      width: 20rem;
+      min-width: 20rem;
+      max-width: 20rem;
+      margin-top: 0;
+
+      .news-card {
+        &.card--a {
+          width: 100%;
+        }
+
+        &__content {
+          height: auto;
+        }
+      }
+    }
+
+    &__article {
+      position: sticky;
+      top: 2rem;
+      flex-grow: 1;
+      height: calc(100dvh - 2rem);
+      margin-top: -5rem;
+      margin-bottom: -2rem;
+      overflow-y: auto;
+    }
+  }
+
+  @include breakpoints.xl {
+    .news-list,
+    .news-container {
+      width: 100%;
+    }
+
+    &__list {
+      width: 32rem;
+      min-width: 32rem;
+      max-width: 32rem;
+      margin-top: 0;
+
+      .news-card {
+        width: 15rem;
+      }
+    }
+  }
+
+  .news-card--active.card {
+    pointer-events: none;
+    background-color: var(--color-card-active-bg);
+
+    &:before {
+      display: none;
+    }
+
+    .news-card__content,
+    .news-card__footer {
+      color: var(--color-card-active);
+    }
+  }
+
+  @media not screen and (-webkit-min-device-pixel-ratio: 2),
+    not screen and (min--moz-device-pixel-ratio: 2),
+    not screen and (-o-min-device-pixel-ratio: 2/1),
+    not screen and (min-device-pixel-ratio: 2),
+    not screen and (min-resolution: 192dpi),
+    not screen and (min-resolution: 2dppx) {
+    /* firefox */
+    * {
+      scrollbar-color: var(--color-layout-content-bg)
+        var(--color-layout-content-bg);
+    }
+
+    /* chrome, edge, and safari */
+    ::-webkit-scrollbar {
+      background-color: var(--color-layout-content-bg);
+
+      &-thumb {
+        background: var(--color-layout-content-bg);
+
+        &:hover {
+          background: var(--color-layout-content-bg);
+        }
+      }
+    }
+  }
+}

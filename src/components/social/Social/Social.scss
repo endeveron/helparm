@@ -1,0 +1,55 @@
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.social {
+  @include mixins.flex-col-center();
+
+  width: 100%;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-paper-bg);
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 700;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: var(--color-gold);
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+
+  &__links {
+    @include mixins.flex-center();
+
+    flex-wrap: wrap;
+    max-width: 14rem;
+
+    padding: 0.5rem;
+    gap: 1.25rem;
+  }
+
+  @include breakpoints.md {
+    max-width: unset;
+
+    &__description br {
+      display: none;
+    }
+
+    &__links {
+      gap: 1.5rem;
+      max-width: unset;
+    }
+  }
+
+  @include breakpoints.lg {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+}

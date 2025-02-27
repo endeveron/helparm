@@ -1,0 +1,9 @@
+@use 'styles/mixins';
+
+.article-main {
+  @include mixins.flex-col();
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}

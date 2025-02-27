@@ -1,0 +1,19 @@
+@use 'styles/mixins';
+
+.article-section {
+  @include mixins.flex-col();
+  $self: &;
+
+  & > *:not(#{$self}__title) {
+    margin-top: 1rem;
+  }
+
+  & > .list {
+    padding-left: 1.5rem;
+  }
+
+  &__title {
+    margin-bottom: 0.25rem;
+    color: var(--color-title);
+  }
+}

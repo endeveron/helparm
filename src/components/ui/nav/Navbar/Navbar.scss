@@ -1,0 +1,71 @@
+@use 'styles/breakpoints';
+
+.navbar {
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: var(--s-navbar-height);
+  padding: 0.5rem;
+  background-color: var(--color-paper-bg);
+
+  &__items {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &.desktop {
+      display: none;
+    }
+  }
+
+  @include breakpoints.sm {
+    box-sizing: border-box;
+    top: 0;
+    min-height: 100vh;
+    width: 3rem;
+    min-width: 3rem;
+    position: sticky;
+    right: unset;
+    padding: 2rem 0;
+
+    &__item-group,
+    &__main-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    &__items {
+      &.mobile {
+        display: none;
+      }
+
+      &.desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+      }
+    }
+  }
+
+  @media all and (min-width: 620px) {
+    width: 4rem;
+    min-width: 4rem;
+  }
+
+  @media all and (max-height: 800px) {
+    &__item-group--bottom {
+      gap: 2rem;
+    }
+
+    &__main-items {
+      display: none;
+    }
+  }
+}

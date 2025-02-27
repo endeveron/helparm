@@ -1,0 +1,118 @@
+.form {
+  $self: &;
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+
+    & ~ & {
+      margin-top: 0.75rem;
+    }
+
+    &--required {
+      #{$self}-label {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 0.125rem;
+          left: 0.125rem;
+          display: block;
+          content: '*';
+          font-size: 1rem;
+          color: var(--color-gold);
+        }
+      }
+    }
+
+    &--invalid {
+      #{$self}-input {
+        border-color: var(--color-danger);
+      }
+    }
+  }
+
+  &-label,
+  &-error-message {
+    padding-left: 0.875rem;
+  }
+
+  &-label {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-second);
+  }
+
+  &-input {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border-width: 0.125rem;
+    border-style: solid;
+    border-color: var(--color-form-input-border);
+    background-color: var(--color-form-input-bg);
+    transition: border-color var(--transition);
+
+    &:hover {
+      border-color: var(--color-form-input-border-hover);
+    }
+
+    &:active,
+    &:focus {
+      border-color: var(--color-form-input-border-active);
+    }
+
+    &--select {
+      color: inherit;
+      font-family: inherit;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+
+      .select-option {
+        color: var(--color-black);
+      }
+    }
+
+    &--textarea {
+      min-width: 100%;
+      max-width: 100%;
+      font-family: inherit;
+    }
+  }
+
+  &-input-group {
+    display: flex;
+    position: relative;
+
+    #{$self}-input {
+      flex-grow: 1;
+      padding-right: 2.5rem;
+    }
+
+    #{$self}-input-icon {
+      position: absolute;
+      top: 50%;
+      right: 0.75rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  &-error-message {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-danger);
+    font-size: 0.875rem;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}

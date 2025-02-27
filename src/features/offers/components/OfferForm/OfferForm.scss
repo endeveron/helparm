@@ -1,0 +1,71 @@
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+@use '../../../../components/form/form.scss';
+
+.offer-form {
+  @include mixins.flex-col-center();
+  $self: &;
+
+  &__fields-wrapper {
+    width: 100%;
+    max-width: 60rem;
+    padding: 1.5rem 0;
+  }
+
+  &__label {
+    position: relative;
+
+    &__counter {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--color-second);
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  &__field-stack,
+  &__field {
+    & ~ & {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__actions-wrapper {
+    padding: 1rem 0;
+  }
+
+  &__field {
+    input,
+    textarea,
+    select {
+      background-color: var(--color-input-bg);
+    }
+  }
+
+  &__icon {
+    opacity: 0.5;
+    color: var(--color-second);
+    transform: translateY(0.285rem);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @include breakpoints.md {
+    &__field-stack {
+      display: flex;
+      gap: 1.5rem;
+
+      #{$self}__field {
+        width: calc(100% - 0.75rem);
+        margin-top: 0;
+      }
+    }
+  }
+}

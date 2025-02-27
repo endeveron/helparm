@@ -1,0 +1,23 @@
+.offer-category-item {
+  cursor: pointer;
+  min-width: 3.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.875rem 1.25rem;
+  background-color: var(--color-paper-bg);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  // &:hover {
+  //   background-color: var(--color-paper-bg);
+  // }
+
+  &--active {
+    font-weight: 700;
+    pointer-events: none;
+    color: var(--color-inverse);
+    background-color: var(--color-gold-bg) !important;
+  }
+}

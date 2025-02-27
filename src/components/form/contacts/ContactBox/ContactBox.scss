@@ -1,0 +1,32 @@
+.contact-box {
+  $self: &;
+  cursor: pointer;
+  position: relative;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__title {
+    opacity: 0;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-second);
+    transform: translate(-50%);
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover #{$self}__title {
+    opacity: 1;
+  }
+}

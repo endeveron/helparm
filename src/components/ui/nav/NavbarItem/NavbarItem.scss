@@ -1,0 +1,62 @@
+@use 'styles/mixins';
+@use 'styles/breakpoints';
+
+.navbar-item {
+  @include mixins.flex-col-center();
+  $self: &;
+
+  cursor: pointer;
+  min-width: 3.5rem;
+
+  &--active {
+    pointer-events: none;
+
+    #{$self}__icon,
+    #{$self}__title {
+      color: var(--color-icon-active);
+    }
+  }
+
+  &__icon {
+    color: var(--color-icon);
+  }
+
+  &__icon {
+    &,
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__title {
+    padding-top: 0.125rem;
+    font-size: 0.675rem;
+    color: var(--color-second);
+  }
+
+  &__tooltip {
+    display: none;
+  }
+
+  @include breakpoints.sm {
+    display: flex;
+    position: relative;
+
+    &__title {
+      display: none;
+    }
+
+    &__tooltip {
+      display: block;
+      left: 4.25rem;
+      top: -0.5rem;
+    }
+
+    &:hover {
+      #{$self}__tooltip {
+        opacity: 1;
+      }
+    }
+  }
+}

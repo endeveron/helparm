@@ -1,0 +1,27 @@
+@use 'styles/breakpoints';
+
+.offers {
+  $self: &;
+
+  &__items {
+    position: relative;
+    padding-top: 1.75rem;
+  }
+
+  &--float-button {
+    #{$self}__items {
+      padding-bottom: 3.5rem;
+    }
+  }
+
+  @include breakpoints.md {
+    &__notification {
+      width: max-content;
+    }
+
+    &__header {
+      margin-top: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use 'styles/breakpoints';
+
+.article-card-list {
+  @include breakpoints.md {
+    .card--a {
+      width: calc(50% - 0.5rem);
+    }
+  }
+
+  @include breakpoints.lg {
+    gap: 1.5rem;
+
+    .card--a {
+      width: calc(50% - 0.75rem);
+    }
+  }
+}

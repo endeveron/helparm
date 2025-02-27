@@ -1,0 +1,19 @@
+@use 'styles/mixins';
+
+.article-header {
+  @include mixins.flex-row();
+  margin-bottom: 3rem;
+
+  &__icon-box {
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-paper-bg);
+  }
+
+  &__icon {
+    color: var(--color-accent);
+  }
+}

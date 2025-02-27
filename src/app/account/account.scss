@@ -1,0 +1,49 @@
+@use 'styles/breakpoints';
+
+.account {
+  & > div + div {
+    margin-top: 2.5rem;
+  }
+
+  &__title-link {
+    margin-left: 1rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__sign-out {
+      padding-top: 0.375rem;
+      padding-left: 0.75rem;
+    }
+  }
+
+  &__email {
+    cursor: default;
+    padding-top: 0.75rem;
+    color: var(--color-second);
+  }
+
+  &__offers {
+    .offer-container {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .offers .offers__items {
+    padding-top: 0.875rem;
+  }
+
+  .offer-list__no-result {
+    transform: translateY(-0.5rem);
+  }
+
+  @include breakpoints.md {
+    &__header {
+      &__sign-out {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}

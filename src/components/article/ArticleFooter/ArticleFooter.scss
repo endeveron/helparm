@@ -1,0 +1,71 @@
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.article-footer {
+  $self: &;
+  margin-top: 3rem;
+
+  &__nav {
+    @include mixins.flex-row();
+    gap: 1rem;
+  }
+
+  &__link-wrapper {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  &__link {
+    @include mixins.flex-row();
+
+    padding: 1.25rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: var(--color-paper-bg);
+
+    &-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    &-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    &--next {
+      flex-direction: row-reverse;
+
+      #{$self}__link-title {
+        padding-right: 0.25rem;
+      }
+    }
+  }
+
+  @include breakpoints.sm {
+    &__link {
+      &--next {
+        #{$self}__link-title {
+          padding-right: 0.75rem;
+        }
+      }
+
+      &--prev {
+        #{$self}__link-title {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @include breakpoints.lg {
+    &__nav {
+      justify-content: space-between;
+    }
+
+    &__link-wrapper {
+      width: 20rem;
+      flex-grow: 0;
+    }
+  }
+}

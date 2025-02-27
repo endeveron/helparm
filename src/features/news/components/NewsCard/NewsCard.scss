@@ -1,0 +1,64 @@
+@use 'styles/animations';
+@use 'styles/breakpoints';
+
+.news-card {
+  $self: &;
+
+  position: relative;
+  padding: 1.5rem 1.25rem;
+  transition: opacity 0.5s ease, color 0.5s ease;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 1.125rem;
+    left: 0;
+    width: 0.25rem;
+    height: 2rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    background-color: var(--color-accent);
+  }
+
+  &__content {
+    font-weight: 500;
+  }
+
+  &__footer {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+    color: var(--color-second);
+  }
+
+  // @include breakpoints.md {
+  //   &__content {
+  //     height: 4.5rem;
+  //     max-width: 100%;
+  //     display: -webkit-box;
+  //     -webkit-line-clamp: 3;
+  //     -webkit-box-orient: vertical;
+  //     overflow: hidden;
+  //   }
+  // }
+
+  @include breakpoints.lg {
+    padding: 1.5rem 1.75rem;
+
+    &:before {
+      top: 1rem;
+      height: 2.25rem;
+    }
+
+    // &__content {
+    //   height: 4.5rem;
+    // }
+  }
+
+  // @include breakpoints.xl {
+  //   &__content {
+  //     height: auto;
+  //   }
+  // }
+}

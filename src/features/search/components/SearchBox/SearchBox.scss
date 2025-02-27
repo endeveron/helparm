@@ -1,0 +1,32 @@
+@use 'styles/breakpoints';
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-paper-bg);
+
+  &__input-wrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    margin-left: 0.5rem;
+    background-color: var(--color-paper-bg);
+  }
+
+  &__icon {
+    font-size: 0;
+    color: var(--color-second);
+  }
+
+  @include breakpoints.md {
+    width: 38rem;
+  }
+}

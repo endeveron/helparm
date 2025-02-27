@@ -1,0 +1,8 @@
+@use 'styles/mixins';
+
+.view-loading {
+  @include mixins.flex-col-center();
+  height: 100%;
+
+  animation-delay: 1s;
+}

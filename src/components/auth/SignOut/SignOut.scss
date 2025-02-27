@@ -1,0 +1,9 @@
+.sign-out {
+  display: flex;
+  color: var(--color-second);
+  cursor: pointer;
+
+  &__icon {
+    margin-left: 0.5rem;
+  }
+}

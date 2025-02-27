@@ -1,0 +1,11 @@
+@use 'styles/breakpoints';
+
+.offer-promo {
+  width: 100%;
+
+  @include breakpoints.md {
+    .promo-box__description br {
+      display: none;
+    }
+  }
+}

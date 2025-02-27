@@ -1,0 +1,54 @@
+@use 'styles/breakpoints';
+
+.create-offer-button {
+  $self: &;
+
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem !important;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &--floating {
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+    z-index: 5;
+
+    @include breakpoints.sm {
+      bottom: 2rem;
+    }
+
+    @include breakpoints.xl {
+      right: calc(50vw - 38rem);
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    right: 3.5rem;
+    bottom: -0.75rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-main);
+    border-radius: 0.5rem;
+    background-color: var(--color-paper-bg);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &-wrapper {
+      position: relative;
+    }
+  }
+
+  &:hover {
+    #{$self}__tooltip {
+      opacity: 1;
+    }
+  }
+}

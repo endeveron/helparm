@@ -1,0 +1,118 @@
+:root[data-theme='light'] {
+  --color-main: var(--color-gray-800);
+  --color-inverse: var(--color-white);
+
+  --color-title: var(--color-gray-800);
+  --color-main-title: var(--color-white);
+
+  --color-accent: var(--color-cyan-500);
+  --color-second: var(--color-gray-500);
+  --color-second-focus: var(--color-gray-700);
+  --color-gold: var(--color-orange-400);
+
+  --color-card: var(--color-gray-800);
+  --color-card-active: var(--color-white);
+
+  --color-icon: var(--color-gray-400);
+  --color-icon-active: var(--color-cyan-500);
+  --color-caption: #b4bfcf;
+
+  --color-link: var(--color-cyan-800);
+  --color-button: #05c0e3;
+  --color-button-text: var(--color-white);
+  --color-button-hover: #00a3c3;
+  --color-button-accent: #ff8e41;
+  --color-button-accent-hover: #ff7415;
+
+  --color-success: var(--color-green-600);
+  --color-danger: var(--color-red-500);
+  --color-info: var(--color-cyan-500);
+  --color-divider: var(--color-gray-100);
+  --color-tooltip: var(--color-gray-600);
+
+  --color-form-input: var(--color-gray-800);
+  --color-form-input-border: var(--color-gray-300);
+  --color-form-input-border-hover: var(--color-gray-400);
+  --color-form-input-border-active: var(--color-cyan-500);
+  --color-form-input-autofill: #e3f3ff;
+  --color-form-input-bg: var(--color-whiteAlpha-800);
+
+  --color-table-head: var(--color-gray-500);
+  --color-table-divider: var(--color-gray-300);
+
+  --color-bg: var(--color-gray-200);
+  --color-loading-overlay: rgba(226, 232, 240, 0.5);
+  --color-second-bg: #f6fafd;
+  --color-accent-bg: var(--color-cyan-500);
+  --color-gold-bg: #e99740;
+  --color-card-active-bg: var(--color-cyan-500);
+  --color-paper-bg: var(--color-white);
+  --color-paper-bg-second: #f9fcff;
+  --color-promo-bg: #aaebff;
+  --color-transparent-bg: var(--color-whiteAlpha-400);
+  --color-layout-content-bg: var(--color-gray-100);
+
+  --color-title-shadow: #34647e21;
+
+  --color-scrollbar: var(--color-gray-300);
+  --color-scrollbar-hover: var(--color-gray-400);
+}
+
+:root[data-theme='dark'] {
+  --color-main: var(--color-whiteAlpha-900);
+  --color-inverse: var(--color-gray-800);
+
+  --color-title: var(--color-cyan-400);
+  --color-main-title: var(--color-white);
+
+  --color-accent: var(--color-cyan-400);
+  --color-second: var(--color-whiteAlpha-600);
+  --color-second-focus: var(--color-whiteAlpha-800);
+  --color-gold: var(--color-orange-300);
+  --color-gold-title: var(--color-orange-300);
+
+  --color-card: var(--color-whiteAlpha-900);
+  --color-card-active: var(--color-white);
+
+  --color-icon: var(--color-gray-400);
+  --color-icon-active: var(--color-cyan-400);
+  --color-caption: #58667b;
+
+  --color-link: var(--color-cyan-300);
+  --color-button: #039ebd;
+  --color-button-text: var(--color-black);
+  --color-button-hover: #00add0;
+  --color-button-accent: #ffa447;
+  --color-button-accent-hover: #ffb15d;
+
+  --color-success: var(--color-green-300);
+  --color-danger: var(--color-red-300);
+  --color-info: var(--color-cyan-600);
+  --color-divider: #242831;
+  --color-tooltip: var(--color-whiteAlpha-900);
+
+  --color-form-input: var(--color-whiteAlpha-900);
+  --color-form-input-border: var(--color-gray-600);
+  --color-form-input-border-hover: var(--color-gray-500);
+  --color-form-input-border-active: var(--color-cyan-400);
+  --color-form-input-autofill: #202939;
+  --color-form-input-bg: #232c39;
+
+  --color-table-head: var(--color-gray-400);
+  --color-table-divider: var(--color-whiteAlpha-100);
+
+  --color-bg: var(--color-gray-900);
+  --color-loading-overlay: rgba(23, 25, 35, 0.75);
+  --color-second-bg: #242d3b;
+  --color-accent-bg: var(--color-cyan-600);
+  --color-gold-bg: #e9a047;
+  --color-card-active-bg: var(--color-cyan-600);
+  --color-paper-bg: var(--color-gray-700);
+  --color-paper-bg-second: #222c3a;
+  --color-promo-bg: #0785ab;
+  --color-transparent-bg: var(--color-whiteAlpha-100);
+  --color-layout-content-bg: var(--color-gray-800);
+
+  --color-scrollbar: var(--color-gray-600);
+  --color-scrollbar-hover: var(--color-gray-400);
+}

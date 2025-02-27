@@ -1,0 +1,43 @@
+.button {
+  box-sizing: border-box;
+  padding: 0.875rem 1.25rem;
+  border-radius: 3rem;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  // letter-spacing: 0.03125rem;
+  color: var(--color-button-text);
+  background-color: var(--color-button);
+  transition: border-color var(--transition), background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-button-hover);
+  }
+
+  &--accent {
+    background-color: var(--color-button-accent);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-button-accent-hover);
+    }
+  }
+
+  &--text {
+    width: auto;
+    padding: 0 0.5rem;
+    color: var(--color-main);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &--loading {
+    pointer-events: none;
+  }
+}

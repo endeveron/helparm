@@ -1,0 +1,15 @@
+.share {
+  margin: auto;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem 4rem;
+    border-radius: 1rem;
+    background-color: var(--color-accent);
+  }
+
+  &__logo {
+    margin-bottom: 1rem;
+  }
+}

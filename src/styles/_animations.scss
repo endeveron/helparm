@@ -1,0 +1,96 @@
+%base-anim {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-duration: 0.4s;
+}
+
+.anim {
+  @extend %base-anim;
+
+  &--loading {
+    animation: rotating 1s linear infinite;
+  }
+
+  &--main {
+    &-header {
+      &-logo {
+        @extend %base-anim;
+      }
+
+      &-content {
+        @extend %base-anim;
+        animation-delay: 0.2s;
+      }
+
+      &-counter {
+        @extend %base-anim;
+        animation-delay: 0.4s;
+      }
+
+      &-bg {
+        @extend %base-anim;
+        animation-duration: 1s;
+      }
+    }
+
+    &-promo-box {
+      @extend %base-anim;
+      animation-delay: 0.4s;
+    }
+
+    &-article-list {
+      @extend %base-anim;
+      animation-delay: 0.6s;
+    }
+  }
+
+  &--d05s {
+    @extend %base-anim;
+    animation-delay: 0.5s;
+  }
+
+  &--d125s {
+    @extend %base-anim;
+    animation-delay: 1.25s;
+  }
+}
+
+.appear {
+  animation: appear 0.3s ease-out 0.2s both;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(5rem) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

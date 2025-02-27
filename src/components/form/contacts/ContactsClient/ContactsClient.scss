@@ -1,0 +1,96 @@
+@use 'styles/breakpoints';
+
+.contacts {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 48rem;
+
+  & > div ~ div {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__description {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-second);
+  }
+
+  &__response-message {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__message {
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-paper-bg-second);
+
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-success);
+
+      &--error {
+        color: var(--color-danger);
+      }
+    }
+
+    &__description {
+      padding-top: 1rem;
+      color: var(--color-second);
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  @include breakpoints.md {
+    &__title {
+      text-align: center;
+    }
+
+    &__message {
+      max-width: 40rem;
+      padding: 2rem 3rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      &__title {
+        font-size: 1.5rem;
+      }
+
+      &__description {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        br {
+          display: inline-block;
+        }
+      }
+    }
+
+    &__links {
+      gap: 2rem;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.promo-box {
+  @include mixins.flex-col-center();
+
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border-right: 0.25rem solid var(--color-gold);
+  border-left: 0.25rem solid var(--color-gold);
+  background-color: var(--color-paper-bg);
+
+  &__content {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 700;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: var(--color-gold);
+  }
+
+  &__description {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__row {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      margin-right: 0.75rem;
+    }
+
+    &__link {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+  }
+
+  &__button {
+    margin: 0.5rem;
+  }
+
+  @include breakpoints.md {
+    &__actions {
+      flex-direction: row;
+      padding-right: 0.5rem;
+
+      &__row {
+        margin-top: 0.5rem;
+      }
+
+      &__text {
+        margin-left: 1rem;
+        margin-right: 1.25rem;
+      }
+    }
+  }
+
+  @include breakpoints.lg {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+
+    &__content {
+      text-align: start;
+      padding-left: 4.25rem;
+    }
+
+    &__description {
+      padding-top: 0.5rem;
+    }
+
+    &__text {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    &__actions {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

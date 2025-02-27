@@ -1,0 +1,40 @@
+@use 'styles/breakpoints';
+
+.layout {
+  max-width: 1280px;
+  min-height: calc(100vh - var(--s-navbar-height));
+  margin-inline: auto;
+
+  &__content {
+    min-height: calc(100vh - var(--s-navbar-height));
+    flex-grow: 1;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: calc(1.5rem + var(--s-navbar-height));
+    padding-left: 1rem;
+
+    // Add the possibility of use 'margin: auto'
+    // for the child view ( Login, Signup )
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-layout-content-bg);
+  }
+
+  @include breakpoints.sm {
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__content {
+      flex-grow: 1;
+      padding: 1.5rem 1rem;
+    }
+  }
+
+  @include breakpoints.md {
+    &__content {
+      padding: 1.5rem 2rem;
+    }
+  }
+}

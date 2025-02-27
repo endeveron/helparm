@@ -1,0 +1,38 @@
+@use 'styles/mixins';
+
+.error {
+  @include mixins.flex-col-center;
+  height: 100%;
+
+  &__content {
+    @include mixins.flex-col-center;
+
+    max-width: 37.5rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-paper-bg);
+    overflow: hidden;
+  }
+
+  &__title {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-danger);
+  }
+
+  &__message {
+    max-width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  &__message-row {
+    margin-top: 0.5rem;
+  }
+
+  &__actions {
+    margin-top: 1rem;
+  }
+}

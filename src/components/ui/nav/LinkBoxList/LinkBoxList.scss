@@ -1,0 +1,9 @@
+.link-box-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.article__section__title + .link-box-list {
+  margin-bottom: 0.5rem;
+}

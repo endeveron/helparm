@@ -1,0 +1,43 @@
+@use 'styles/breakpoints';
+@use 'styles/mixins';
+
+.link-box {
+  @include mixins.flex-row();
+
+  $self: &;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-paper-bg);
+
+  &--offline {
+    pointer-events: none;
+
+    #{$self}__icon,
+    #{$self}__description {
+      color: var(--color-gold);
+    }
+  }
+
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 0.75rem;
+    letter-spacing: 0.03125rem;
+    color: var(--color-second);
+  }
+
+  @include breakpoints.md {
+    width: max-content;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,63 @@
+@use 'styles/breakpoints';
+
+.create-offer {
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__message {
+    position: relative;
+    padding: 1rem;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    color: var(--color-card);
+    background-color: var(--color-paper-bg);
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0.75rem;
+      left: 0;
+      bottom: 0.75rem;
+      width: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      background-color: var(--color-gold);
+    }
+  }
+
+  &__success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 20rem;
+    width: 24rem;
+    transform: translate(-10rem, -10rem);
+    text-align: center;
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-success);
+    }
+
+    &__message {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      color: var(--color-second);
+    }
+  }
+
+  @include breakpoints.sm {
+    &__success {
+      left: 50%;
+      transform: translate(-8rem, -10rem);
+    }
+  }
+}
